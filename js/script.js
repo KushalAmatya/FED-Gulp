@@ -4,8 +4,9 @@ jQuery('.feedback-slider').slick({
   dots: true,
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  mobileFirst: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 1024,
