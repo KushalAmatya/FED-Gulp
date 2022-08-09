@@ -1,25 +1,32 @@
 .banner-part {
     /* height: 100vh; */
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    &:before {
-            content: '';
-            display: block;
-            height: 100vh;
-        }
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(191, 61, 66, 1);
-        mix-blend-mode: darken;
+   
+
+    .banner-slider {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+                content: '';
+                display: block;
+                height: 100vh;
+            }
+        
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(191, 61, 66, 1);
+                mix-blend-mode: darken;
+            }
     }
+   
     h1{
         color: white;
     }
@@ -245,4 +252,32 @@
         display: inline-block;
         vertical-align: top;
     }
+    .slick-arrow {
+        font-size: 52px;
+        color: $red;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        &.slick-next{
+            right: 0;
+        }
+
+        &.slick-prev {
+            left: 0;
+        }
+        i{
+                @include animate(color, 0.35s, linear);
+        }
+        &:hover{
+            i{
+                color: darken($red,5%);
+            }
+        }
+    }
+    .feedback-slider {
+        padding: 0 60px;
+    }  
 }
+
